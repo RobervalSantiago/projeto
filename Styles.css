@@ -1,26 +1,29 @@
+/* styles.css */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #f4f4f4;
+    background-color: #f8f9fa;
+    color: #333;
 }
 
 header {
-    background-color: #007bff;
+    background-color: #343a40;
     color: white;
-    padding: 1rem;
+    padding: 1.5rem;
     text-align: center;
     width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 main {
     background: white;
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 90%;
     max-width: 600px;
     margin-top: 20px;
@@ -34,14 +37,23 @@ form {
 label {
     margin-top: 10px;
     font-weight: bold;
+    color: #495057;
 }
 
 input {
-    padding: 8px;
+    padding: 10px;
     margin-top: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #ced4da;
     border-radius: 5px;
     font-size: 1rem;
+    color: #495057;
+    background-color: #f8f9fa;
+}
+
+input:focus {
+    border-color: #80bdff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
 button {
@@ -53,6 +65,7 @@ button {
     border-radius: 5px;
     font-size: 1rem;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
@@ -64,4 +77,24 @@ button:hover {
     padding: 15px;
     background: #e9ecef;
     border-radius: 5px;
+    color: #495057;
+}
+
+#resultadoAcao button, #resultadoBonificacao button {
+    background-color: #28a745;
+    margin-top: 10px;
+}
+
+#resultadoAcao button:hover, #resultadoBonificacao button:hover {
+    background-color: #218838;
+}
+
+/* Estilo para o botão de copiar */
+button[onclick^="copiarTexto"] {
+    background-color: #6c757d;
+    margin-top: 10px;
+}
+
+button[onclick^="copiarTexto"]:hover {
+    background-color: #5a6268;
 }
