@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Ação e Bonificação</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Calculadora de Ação e Bonificação</h1>
+    </header>
+    <main>
+        <form id="actionForm">
+            <label for="cliente">Código/Razão do Cliente:</label>
+            <input type="text" id="cliente" required>
+
+            <label for="produto">Código/Produto:</label>
+            <input type="text" id="produto" required>
+
+            <label for="quantidade">Quantidade do Produto:</label>
+            <input type="number" id="quantidade" required>
+
+            <label for="preco">Preço no Palm:</label>
+            <input type="number" id="preco" step="0.01" required>
+
+            <label for="produtoBonificado">Código/Produto Bonificado:</label>
+            <input type="text" id="produtoBonificado" required>
+
+            <label for="valorBonificado">Valor do Produto Bonificado:</label>
+            <input type="number" id="valorBonificado" step="0.01" required>
+
+            <label for="consultor">Consultor:</label>
+            <input type="text" id="consultor" required>
+
+            <label for="supervisor">Supervisor:</label>
+            <input type="text" id="supervisor" required>
+
+            <button type="button" onclick="calcularAcao()">Calcular Ação</button>
+        </form>
+
+        <div id="resultadoAcao"></div>
+
+        <form id="bonusForm" style="display:none;">
+            <label for="pedido">Código do Pedido:</label>
+            <input type="text" id="pedido" required>
+
+            <label for="observacao">Observação:</label>
+            <input type="text" id="observacao" required>
+
+            <button type="button" onclick="calcularBonificacao()">Calcular Bonificação</button>
+        </form>
+
+        <div id="resultadoBonificacao"></div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
