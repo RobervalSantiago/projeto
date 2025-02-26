@@ -11,6 +11,7 @@
         <h1>Calculadora de Ação e Bonificação</h1>
     </header>
     <main>
+        <!-- Formulário de coleta de dados -->
         <form id="actionForm">
             <label for="cliente">Código/Razão do Cliente:</label>
             <input type="text" id="cliente" required>
@@ -39,8 +40,10 @@
             <button type="button" onclick="calcularAcao()">Calcular Ação</button>
         </form>
 
+        <!-- Resultado da Ação -->
         <div id="resultadoAcao"></div>
 
+        <!-- Formulário de Bonificação (inicialmente oculto) -->
         <form id="bonusForm" style="display:none;">
             <label for="pedido">Código do Pedido:</label>
             <input type="text" id="pedido" required>
@@ -51,6 +54,7 @@
             <button type="button" onclick="calcularBonificacao()">Calcular Bonificação</button>
         </form>
 
+        <!-- Resultado da Bonificação -->
         <div id="resultadoBonificacao"></div>
     </main>
     <script src="script.js"></script>
