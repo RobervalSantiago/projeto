@@ -103,6 +103,8 @@ function coletarDadosFormulario() {
     };
 }
 
+ // ... (código anterior mantido)
+
 // Função para calcular o resultado
 function calcularResultado(dados) {
     console.log("Dados recebidos para cálculo:", dados);
@@ -112,6 +114,23 @@ function calcularResultado(dados) {
         console.error("Valores inválidos para cálculo.");
         return "Erro: Valores inválidos para cálculo.";
     }
+
+    // Cálculo do valor do pedido
+    const valorPedido = dados.quantidade * dados.precoSistema;
+
+    // Cálculo do valor da bonificação
+    const valorBonificacao = dados.valorProdutoBonificado * dados.quantidadeProdutoBonificado;
+
+    // *** CORREÇÃO APLICADA AQUI: Inclui a quantidade bonificada no cálculo ***
+    const precoSolicitado = (valorPedido - valorBonificacao) / (dados.quantidade + dados.quantidadeProdutoBonificado); // <-- Linha modificada
+
+    // Cálculo do investimento %
+    const investimentoPercentual = (valorBonificacao / valorPedido) * 100;
+
+    // ... (restante do código mantido igual)
+}
+
+// ... (código posterior mantido)
 
     // Cálculo do valor do pedido
     const valorPedido = dados.quantidade * dados.precoSistema;
