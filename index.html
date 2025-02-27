@@ -3,60 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de Ação e Bonificação</title>
+    <title>Solicitação de Ação Donizete</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Ícones do Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Manifest para PWA -->
+    <link rel="manifest" href="manifest.json">
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1026108745315813"
+     crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <h1>Calculadora de Ação e Bonificação</h1>
-    </header>
-    <main>
-        <!-- Formulário de coleta de dados -->
-        <form id="actionForm">
-            <label for="cliente">Código/Razão do Cliente:</label>
-            <input type="text" id="cliente" required>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1026108745315813"
+     crossorigin="anonymous"></script>
+<!-- Anúncios -->
+    <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1026108745315813"
+     data-ad-slot="2682349133"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+    <script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    
+    <!-- Botão de Alternância de Tema -->
+    <button class="theme-toggle" aria-label="Alternar tema">
+        <i class="fas fa-moon"></i>
+    </button>
 
-            <label for="produto">Código/Produto:</label>
-            <input type="text" id="produto" required>
+    <div class="container">
+        <!-- Cabeçalho -->
+        <header>
+            <h1><i class="fas fa-file-alt" aria-label="Ícone de documento"></i> Solicitação de Ação</h1>
+            <p>Preencha os campos abaixo para solicitar uma ação comercial.</p>
+        </header>
 
-            <label for="quantidade">Quantidade do Produto:</label>
-            <input type="number" id="quantidade" required>
+        <!-- Formulário Principal -->
+        <form id="formAcao">
+            <!-- Seção: Informações do Cliente -->
+            <section class="form-section">
+                <h2><i class="fas fa-user" aria-label="Ícone de usuário"></i> Informações do Cliente</h2>
+                <div class="form-group">
+                    <label for="codRazaoCliente">Código/Razão do Cliente:</label>
+                    <input type="text" id="codRazaoCliente" required aria-describedby="codRazaoClienteHelp">
+                    <div id="sugestoesCliente" class="sugestoes"></div>
+                    <small id="codRazaoClienteHelp" class="error-message" role="alert"></small>
+                </div>
+            </section>
 
-            <label for="preco">Preço no Palm:</label>
-            <input type="number" id="preco" step="0.01" required>
+            <!-- Seção: Detalhes do Produto -->
+            <section class="form-section">
+                <h2><i class="fas fa-box" aria-label="Ícone de caixa"></i> Detalhes do Produto</h2>
+                <div class="form-group">
+                    <label for="codProduto">Código/Produto:</label>
+                    <input type="text" id="codProduto" required aria-describedby="codProdutoHelp">
+                    <div id="sugestoesProduto" class="sugestoes"></div>
+                    <small id="codProdutoHelp" class="error-message" role="alert"></small>
+                </div>
+                <div class="form-group">
+                    <label for="quantidadeAcao">Quantidade do Produto:</label>
+                    <input type="number" id="quantidadeAcao" required aria-describedby="quantidadeAcaoHelp" min="1">
+                    <small id="quantidadeAcaoHelp" class="error-message" role="alert"></small>
+                </div>
+                <div class="form-group">
+                    <label for="precoSistema">Preço do Palm:</label>
+                    <input type="number" id="precoSistema" step="0.01" required aria-describedby="precoSistemaHelp" min="0">
+                    <small id="precoSistemaHelp" class="error-message" role="alert"></small>
+                </div>
+            </section>
 
-            <label for="produtoBonificado">Código/Produto Bonificado:</label>
-            <input type="text" id="produtoBonificado" required>
+            <!-- Seção: Bonificação -->
+            <section class="form-section">
+                <h2><i class="fas fa-gift" aria-label="Ícone de presente"></i> Bonificação</h2>
+                <div class="form-group">
+                    <label for="codProdutoBonificado">Código/Produto Bonificado:</label>
+                    <input type="text" id="codProdutoBonificado" required aria-describedby="codProdutoBonificadoHelp">
+                    <div id="sugestoesBonificado" class="sugestoes"></div>
+                    <small id="codProdutoBonificadoHelp" class="error-message" role="alert"></small>
+                </div>
+                <div class="form-group">
+                    <label for="quantidadeProdutoBonificado">Quantidade do Produto Bonificado:</label>
+                    <input type="number" id="quantidadeProdutoBonificado" required aria-describedby="quantidadeProdutoBonificadoHelp" min="1">
+                    <small id="quantidadeProdutoBonificadoHelp" class="error-message" role="alert"></small>
+                </div>
+                <div class="form-group">
+                    <label for="valorProdutoBonificado">Valor do Produto Bonificado:</label>
+                    <input type="number" id="valorProdutoBonificado" step="0.01" required aria-describedby="valorProdutoBonificadoHelp" min="0">
+                    <small id="valorProdutoBonificadoHelp" class="error-message" role="alert"></small>
+                </div>
+            </section>
 
-            <label for="valorBonificado">Valor do Produto Bonificado:</label>
-            <input type="number" id="valorBonificado" step="0.01" required>
-
-            <label for="consultor">Consultor:</label>
-            <input type="text" id="consultor" required>
-
-            <label for="supervisor">Supervisor:</label>
-            <input type="text" id="supervisor" required>
-
-            <button type="button" onclick="calcularAcao()">Calcular Ação</button>
+            <!-- Botões de Ação -->
+            <div class="form-actions">
+                <button type="submit" class="btn calcular"><i class="fas fa-calculator"></i> Calcular</button>
+                <button type="button" id="limpar" class="btn limpar"><i class="fas fa-eraser"></i> Limpar</button>
+            </div>
         </form>
 
-        <!-- Resultado da Ação -->
-        <div id="resultadoAcao"></div>
+        <!-- Resultado da Ação (Oculto Inicialmente) -->
+        <section class="result-section" id="resultadoAcaoSection" style="display: none;">
+            <h2><i class="fas fa-chart-line" aria-label="Ícone de gráfico"></i> Resultado da Ação</h2>
+            <div id="resultadoAcao" class="resultado"></div>
 
-        <!-- Formulário de Bonificação (inicialmente oculto) -->
-        <form id="bonusForm" style="display:none;">
-            <label for="pedido">Código do Pedido:</label>
-            <input type="text" id="pedido" required>
+            <!-- Botões de Copiar e Compartilhar (Ocultos Inicialmente) -->
+            <div class="botoes-resultado" id="botoesResultado" style="display: none;">
+                <button id="copiar" class="btn copiar"><i class="fas fa-copy"></i> Copiar</button>
+                <button id="compartilhar" class="btn whatsapp"><i class="fab fa-whatsapp"></i> Compartilhar</button>
+            </div>
+        </section>
 
-            <label for="observacao">Observação:</label>
-            <input type="text" id="observacao" required>
+        <!-- Campos de Bonificação (Ocultos Inicialmente) -->
+        <section id="bonificacaoCampos" class="form-section" style="display: none;">
+            <h2><i class="fas fa-gift" aria-label="Ícone de presente"></i> Detalhes da Bonificação</h2>
+            <div class="form-group">
+                <label for="codConsultor">Cód/Consultor:</label>
+                <input type="text" id="codConsultor" required aria-describedby="codConsultorHelp">
+                <small id="codConsultorHelp" class="error-message" role="alert"></small>
+            </div>
+            <div class="form-group">
+                <label for="codPedido">Código do Pedido:</label>
+                <input type="text" id="codPedido" required aria-describedby="codPedidoHelp">
+                <small id="codPedidoHelp" class="error-message" role="alert"></small>
+            </div>
+            <div class="form-group">
+                <label for="observacao">Observação:</label>
+                <input type="text" id="observacao" aria-describedby="observacaoHelp">
+                <small id="observacaoHelp" class="error-message" role="alert"></small>
+            </div>
+            <button id="gerarBonificacao" class="btn bonificacao"><i class="fas fa-check"></i> Gerar Bonificação</button>
+        </section>
 
-            <button type="button" onclick="calcularBonificacao()">Calcular Bonificação</button>
-        </form>
+        <!-- Resultado da Bonificação (Oculto Inicialmente) -->
+        <section class="result-section" id="resultadoBonificacaoSection" style="display: none;">
+            <h2><i class="fas fa-chart-pie" aria-label="Ícone de gráfico de pizza"></i> Resultado da Bonificação</h2>
+            <div id="resultadoBonificacao" class="resultado"></div>
 
-        <!-- Resultado da Bonificação -->
-        <div id="resultadoBonificacao"></div>
-    </main>
+            <!-- Botões de Copiar e Compartilhar (Ocultos Inicialmente) -->
+            <div class="botoes-resultado" id="botoesBonificacao" style="display: none;">
+                <button id="copiarBonificacao" class="btn copiar"><i class="fas fa-copy"></i> Copiar</button>
+                <button id="compartilharBonificacao" class="btn whatsapp"><i class="fab fa-whatsapp"></i> Compartilhar</button>
+            </div>
+        </section>
+
+        <!-- Spinner de Carregamento -->
+        <div id="loading" class="loading" style="display: none;">
+            <div class="spinner"></div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
+    <script>
+        // Registrar o Service Worker para PWA
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js')
+                .then(() => console.log('Service Worker registrado com sucesso!'))
+                .catch((error) => console.log('Erro ao registrar Service Worker:', error));
+        }
+    </script>
 </body>
 </html>
