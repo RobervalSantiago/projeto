@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solicitação de Ação Donizete</title>
+    <title>SolicitaÃ§Ã£o de AÃ§Ã£o Donizete</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Ícones do Font Awesome -->
+    <!-- Ãcones do Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Manifest para PWA -->
     <link rel="manifest" href="manifest.json">
@@ -16,7 +16,7 @@
 <body>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1026108745315813"
      crossorigin="anonymous"></script>
-<!-- Anúncios -->
+<!-- AnÃºncios -->
     <ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-1026108745315813"
@@ -27,36 +27,36 @@
      (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
     
-    <!-- Botão de Alternância de Tema -->
+    <!-- BotÃ£o de AlternÃ¢ncia de Tema -->
     <button class="theme-toggle" aria-label="Alternar tema">
         <i class="fas fa-moon"></i>
     </button>
 
     <div class="container">
-        <!-- Cabeçalho -->
+        <!-- CabeÃ§alho -->
         <header>
-            <h1><i class="fas fa-file-alt" aria-label="Ícone de documento"></i> Solicitação de Ação</h1>
-            <p>Preencha os campos abaixo para solicitar uma ação comercial.</p>
+            <h1><i class="fas fa-file-alt" aria-label="Ãcone de documento"></i> SolicitaÃ§Ã£o de AÃ§Ã£o</h1>
+            <p>Preencha os campos abaixo para solicitar uma aÃ§Ã£o comercial.</p>
         </header>
 
-        <!-- Formulário Principal -->
+        <!-- FormulÃ¡rio Principal -->
         <form id="formAcao">
-            <!-- Seção: Informações do Cliente -->
+            <!-- SeÃ§Ã£o: InformaÃ§Ãµes do Cliente -->
             <section class="form-section">
-                <h2><i class="fas fa-user" aria-label="Ícone de usuário"></i> Informações do Cliente</h2>
+                <h2><i class="fas fa-user" aria-label="Ãcone de usuÃ¡rio"></i> InformaÃ§Ãµes do Cliente</h2>
                 <div class="form-group">
-                    <label for="codRazaoCliente">Código/Razão do Cliente:</label>
+                    <label for="codRazaoCliente">CÃ³digo/RazÃ£o do Cliente:</label>
                     <input type="text" id="codRazaoCliente" required aria-describedby="codRazaoClienteHelp">
                     <div id="sugestoesCliente" class="sugestoes"></div>
                     <small id="codRazaoClienteHelp" class="error-message" role="alert"></small>
                 </div>
             </section>
 
-            <!-- Seção: Detalhes do Produto -->
+            <!-- SeÃ§Ã£o: Detalhes do Produto -->
             <section class="form-section">
-                <h2><i class="fas fa-box" aria-label="Ícone de caixa"></i> Detalhes do Produto</h2>
+                <h2><i class="fas fa-box" aria-label="Ãcone de caixa"></i> Detalhes do Produto</h2>
                 <div class="form-group">
-                    <label for="codProduto">Código/Produto:</label>
+                    <label for="codProduto">CÃ³digo/Produto:</label>
                     <input type="text" id="codProduto" required aria-describedby="codProdutoHelp">
                     <div id="sugestoesProduto" class="sugestoes"></div>
                     <small id="codProdutoHelp" class="error-message" role="alert"></small>
@@ -67,17 +67,17 @@
                     <small id="quantidadeAcaoHelp" class="error-message" role="alert"></small>
                 </div>
                 <div class="form-group">
-                    <label for="precoSistema">Preço do Palm:</label>
+                    <label for="precoSistema">PreÃ§o do Palm:</label>
                     <input type="number" id="precoSistema" step="0.01" required aria-describedby="precoSistemaHelp" min="0">
                     <small id="precoSistemaHelp" class="error-message" role="alert"></small>
                 </div>
             </section>
 
-            <!-- Seção: Bonificação -->
+            <!-- SeÃ§Ã£o: BonificaÃ§Ã£o -->
             <section class="form-section">
-                <h2><i class="fas fa-gift" aria-label="Ícone de presente"></i> Bonificação</h2>
+                <h2><i class="fas fa-gift" aria-label="Ãcone de presente"></i> BonificaÃ§Ã£o</h2>
                 <div class="form-group">
-                    <label for="codProdutoBonificado">Código/Produto Bonificado:</label>
+                    <label for="codProdutoBonificado">CÃ³digo/Produto Bonificado:</label>
                     <input type="text" id="codProdutoBonificado" required aria-describedby="codProdutoBonificadoHelp">
                     <div id="sugestoesBonificado" class="sugestoes"></div>
                     <small id="codProdutoBonificadoHelp" class="error-message" role="alert"></small>
@@ -94,52 +94,52 @@
                 </div>
             </section>
 
-            <!-- Botões de Ação -->
+            <!-- BotÃµes de AÃ§Ã£o -->
             <div class="form-actions">
                 <button type="submit" class="btn calcular"><i class="fas fa-calculator"></i> Calcular</button>
                 <button type="button" id="limpar" class="btn limpar"><i class="fas fa-eraser"></i> Limpar</button>
             </div>
         </form>
 
-        <!-- Resultado da Ação (Oculto Inicialmente) -->
+        <!-- Resultado da AÃ§Ã£o (Oculto Inicialmente) -->
         <section class="result-section" id="resultadoAcaoSection" style="display: none;">
-            <h2><i class="fas fa-chart-line" aria-label="Ícone de gráfico"></i> Resultado da Ação</h2>
+            <h2><i class="fas fa-chart-line" aria-label="Ãcone de grÃ¡fico"></i> Resultado da AÃ§Ã£o</h2>
             <div id="resultadoAcao" class="resultado"></div>
 
-            <!-- Botões de Copiar e Compartilhar (Ocultos Inicialmente) -->
+            <!-- BotÃµes de Copiar e Compartilhar (Ocultos Inicialmente) -->
             <div class="botoes-resultado" id="botoesResultado" style="display: none;">
                 <button id="copiar" class="btn copiar"><i class="fas fa-copy"></i> Copiar</button>
                 <button id="compartilhar" class="btn whatsapp"><i class="fab fa-whatsapp"></i> Compartilhar</button>
             </div>
         </section>
 
-        <!-- Campos de Bonificação (Ocultos Inicialmente) -->
+        <!-- Campos de BonificaÃ§Ã£o (Ocultos Inicialmente) -->
         <section id="bonificacaoCampos" class="form-section" style="display: none;">
-            <h2><i class="fas fa-gift" aria-label="Ícone de presente"></i> Detalhes da Bonificação</h2>
+            <h2><i class="fas fa-gift" aria-label="Ãcone de presente"></i> Detalhes da BonificaÃ§Ã£o</h2>
             <div class="form-group">
-                <label for="codConsultor">Cód/Consultor:</label>
+                <label for="codConsultor">CÃ³d/Consultor:</label>
                 <input type="text" id="codConsultor" required aria-describedby="codConsultorHelp">
                 <small id="codConsultorHelp" class="error-message" role="alert"></small>
             </div>
             <div class="form-group">
-                <label for="codPedido">Código do Pedido:</label>
+                <label for="codPedido">CÃ³digo do Pedido:</label>
                 <input type="text" id="codPedido" required aria-describedby="codPedidoHelp">
                 <small id="codPedidoHelp" class="error-message" role="alert"></small>
             </div>
             <div class="form-group">
-                <label for="observacao">Observação:</label>
+                <label for="observacao">ObservaÃ§Ã£o:</label>
                 <input type="text" id="observacao" aria-describedby="observacaoHelp">
                 <small id="observacaoHelp" class="error-message" role="alert"></small>
             </div>
-            <button id="gerarBonificacao" class="btn bonificacao"><i class="fas fa-check"></i> Gerar Bonificação</button>
+            <button id="gerarBonificacao" class="btn bonificacao"><i class="fas fa-check"></i> Gerar BonificaÃ§Ã£o</button>
         </section>
 
-        <!-- Resultado da Bonificação (Oculto Inicialmente) -->
+        <!-- Resultado da BonificaÃ§Ã£o (Oculto Inicialmente) -->
         <section class="result-section" id="resultadoBonificacaoSection" style="display: none;">
-            <h2><i class="fas fa-chart-pie" aria-label="Ícone de gráfico de pizza"></i> Resultado da Bonificação</h2>
+            <h2><i class="fas fa-chart-pie" aria-label="Ãcone de grÃ¡fico de pizza"></i> Resultado da BonificaÃ§Ã£o</h2>
             <div id="resultadoBonificacao" class="resultado"></div>
 
-            <!-- Botões de Copiar e Compartilhar (Ocultos Inicialmente) -->
+            <!-- BotÃµes de Copiar e Compartilhar (Ocultos Inicialmente) -->
             <div class="botoes-resultado" id="botoesBonificacao" style="display: none;">
                 <button id="copiarBonificacao" class="btn copiar"><i class="fas fa-copy"></i> Copiar</button>
                 <button id="compartilharBonificacao" class="btn whatsapp"><i class="fab fa-whatsapp"></i> Compartilhar</button>
